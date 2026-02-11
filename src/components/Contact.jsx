@@ -12,7 +12,7 @@ const Contact = () => {
                         or just want to say hi, I'll try my best to get back to you!
                     </p>
 
-                    <a href="mailto:hello@example.com" className="btn btn-primary contact-btn">
+                    <a href="mailto:varunsuddala446@gmail.com" className="btn btn-primary contact-btn">
                         <Mail className="btn-icon" size={20} />
                         Say Hello
                     </a>
