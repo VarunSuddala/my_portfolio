@@ -26,9 +26,6 @@ const Loader = () => {
 
     return (
         <div className={`loader-overlay ${isFadingOut ? 'fade-out' : ''}`}>
-            <div className="loader-brand">
-                Varun<span className="dot">.</span>
-            </div>
             <div className="loader-bar-container">
                 <div className="loader-bar"></div>
             </div>

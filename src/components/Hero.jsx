@@ -7,9 +7,9 @@ const Hero = () => {
                 <div className="hero-text fade-in-up">
                     <h2 className="hero-greeting">Hello, I'm</h2>
                     <h1 className="hero-name">Varun Suddala</h1>
-                    <h2 className="hero-role">Backend & DevOps Engineer</h2>
+                    <h2 className="hero-role">Software Engineer | Backend & DevOps</h2>
                     <p className="hero-tagline">
-                        Architecting scalable systems and high-performance APIs with Python, Docker, and AWS.
+                        Building scalable systems and robust APIs with Python, Docker, AWS, and strong Data Structures fundamentals.
                     </p>
 
                     <div className="hero-actions">

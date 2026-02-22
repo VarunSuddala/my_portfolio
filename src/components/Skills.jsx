@@ -3,12 +3,20 @@ import "./Skills.css";
 const Skills = () => {
     const skillCategories = [
         {
+            title: "Programming Languages",
+            skills: ["Python", "SQL"]
+        },
+        {
+            title: "Problem Solving",
+            skills: ["Data Structures", "Algorithms", "Complexity Analysis"]
+        },
+        {
             title: "Backend",
-            skills: ["Python", "REST APIs", "FastAPI"]
+            skills: ["REST APIs", "FastAPI"]
         },
         {
             title: "Databases",
-            skills: ["PostgreSQL", "MongoDB", "Redis", "SQL"]
+            skills: ["PostgreSQL", "MongoDB", "Redis"]
         },
         {
             title: "DevOps",
