@@ -5,12 +5,12 @@
 
   --text-primary: #f2f2f2;
   --text-secondary: #a1a1a1;
-  --text-accent: #6366f1;
+  --text-accent: #3b82f6;
 
-  --accent-primary: #6366f1;
-  --accent-secondary: #8b5cf6;
+  --accent-primary: #3b82f6;
+  --accent-secondary: #1d4ed8;
   --gradient-main: linear-gradient(135deg, var(--accent-primary) 10%, var(--accent-secondary) 100%);
-  --gradient-glow: radial-gradient(circle at center, rgba(99, 102, 241, 0.08) 0%, rgba(3, 3, 3, 0) 60%);
+  --gradient-glow: radial-gradient(circle at center, rgba(59, 130, 246, 0.08) 0%, rgba(3, 3, 3, 0) 60%);
 
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
 
@@ -19,7 +19,7 @@
 }
 
 ::selection {
-  background: rgba(99, 102, 241, 0.3);
+  background: rgba(59, 130, 246, 0.3);
   color: #fff;
 }
 

@@ -1,33 +1,44 @@
 import "./Skills.css";
 
 const Skills = () => {
-    const skills = [
-        { name: "Python", category: "Language" },
-        { name: "SQL", category: "Language" },
-        { name: "FastAPI", category: "Backend" },
-        { name: "PostgreSQL", category: "Database" },
-        { name: "MongoDB", category: "Database" },
-        { name: "Redis", category: "Caching" },
-        { name: "Docker", category: "DevOps" },
-        { name: "Git / GitHub", category: "Tools" },
-        { name: "Linux", category: "OS" },
-        { name: "AWS (EC2, S3)", category: "Cloud" },
-        { name: "Nginx", category: "Server" },
+    const skillCategories = [
+        {
+            title: "Backend",
+            skills: ["Python", "REST APIs", "FastAPI"]
+        },
+        {
+            title: "Databases",
+            skills: ["PostgreSQL", "MongoDB", "Redis", "SQL"]
+        },
+        {
+            title: "DevOps",
+            skills: ["Docker", "Linux", "Git / GitHub", "Nginx", "CI/CD"]
+        },
+        {
+            title: "Cloud",
+            skills: ["AWS (EC2, S3)"]
+        },
+        {
+            title: "Testing",
+            skills: ["PyTest", "Postman"]
+        }
     ];
 
     return (
         <section id="skills" className="skills section-padding">
             <div className="container">
                 <h2 className="section-title fade-in">Technical Skills</h2>
-                <div className="skills-grid">
-                    {skills.map((skill, index) => (
-                        <div
-                            key={index}
-                            className="skill-card fade-in"
-                            style={{ animationDelay: `${index * 0.05}s` }}
-                        >
-                            <span className="skill-name">{skill.name}</span>
-                            <span className="skill-category">{skill.category}</span>
+                <div className="skills-container">
+                    {skillCategories.map((category, idx) => (
+                        <div key={idx} className="skill-category-block fade-in" style={{ animationDelay: `${idx * 0.1}s` }}>
+                            <h3 className="category-title">{category.title}</h3>
+                            <div className="skills-grid">
+                                {category.skills.map((skill, index) => (
+                                    <div key={index} className="skill-card">
+                                        <span className="skill-name">{skill}</span>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     ))}
                 </div>

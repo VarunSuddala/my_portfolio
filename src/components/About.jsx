@@ -8,18 +8,13 @@ const About = () => {
                 <div className="about-content">
                     <div className="about-text fade-in" style={{ animationDelay: "0.2s" }}>
                         <p>
-                            Hi, I'm <span className="highlight">Varun Suddala</span>. I am a Computer Science student
-                            (B.Tech, 2024–2027) at <span className="highlight">SR University</span>, Warangal.
+                            Hi, I'm <span className="highlight">Varun Suddala</span>, a <span className="text-gradient">Backend & DevOps Engineer</span>.
                         </p>
                         <p>
-                            My journey involves a deep dive into <span className="text-gradient">backend development</span>.
-                            I specialize in building RESTful APIs, managing databases, and ensuring system scalability.
-                            I have hands-on experience with <span className="highlight">Python, PostgreSQL, and Docker</span>,
-                            and I enjoy solving problems related to system design and security.
+                            I specialize in building reliable RESTful APIs, optimizing database performance, and designing architectures that scale. With a strong foundation in <span className="highlight">Python, PostgreSQL, and Docker</span>, I enjoy breaking down complex problems and writing clean, maintainable backend code.
                         </p>
                         <p>
-                            When I'm not coding, I'm exploring cloud architectures (AWS), optimizing database queries,
-                            or learning about strict DevOps practices to streamline deployment pipelines.
+                            My approach integrates a strong DevOps mindset. I actively work with <span className="highlight">Linux and AWS</span> to build streamlined CI/CD pipelines, containerize applications, and ensure deploying code is as efficient as writing it.
                         </p>
 
                         <div className="education mt-4">

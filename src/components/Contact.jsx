@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin, Code } from "lucide-react";
+import { Mail, Github, Linkedin } from "lucide-react";
 import "./Contact.css";
 
 const Contact = () => {
@@ -8,24 +8,21 @@ const Contact = () => {
                 <div className="contact-content fade-in">
                     <h2 className="section-title">Get In Touch</h2>
                     <p className="contact-text">
-                        I'm currently looking for new opportunities. Whether you have a question
-                        or just want to say hi, I'll try my best to get back to you!
+                        I'm always open to discussing backend engineering roles, system design challenges, or new opportunities. Let's connect!
                     </p>
 
-                    <a href="mailto:varunsuddala446@gmail.com" className="btn btn-primary contact-btn">
-                        <Mail className="btn-icon" size={20} />
-                        Say Hello
-                    </a>
-
-                    <div className="social-links">
-                        <a href="https://github.com/varunsuddala" target="_blank" rel="noopener noreferrer" className="social-link">
+                    <div className="contact-links">
+                        <a href="mailto:varunsuddala446@gmail.com" className="contact-link-card">
+                            <Mail size={24} />
+                            <span>Email Me</span>
+                        </a>
+                        <a href="https://github.com/varunsuddala" target="_blank" rel="noopener noreferrer" className="contact-link-card">
                             <Github size={24} />
+                            <span>GitHub</span>
                         </a>
-                        <a href="https://www.linkedin.com/in/varun-suddala-b28621268/" target="_blank" rel="noopener noreferrer" className="social-link">
+                        <a href="https://www.linkedin.com/in/varun-suddala-b28621268/" target="_blank" rel="noopener noreferrer" className="contact-link-card">
                             <Linkedin size={24} />
-                        </a>
-                        <a href="https://leetcode.com/u/EzwDsgpzVX/" target="_blank" rel="noopener noreferrer" className="social-link">
-                            <Code size={24} />
+                            <span>LinkedIn</span>
                         </a>
                     </div>
                 </div>

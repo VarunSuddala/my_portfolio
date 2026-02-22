@@ -14,68 +14,54 @@
 
 .contact-text {
     color: var(--text-secondary);
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     line-height: 1.8;
     margin-bottom: 3rem;
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 300;
 }
 
-.contact-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 3rem;
-    font-size: 1.1rem;
-    border-radius: 100px;
-    background: var(--text-primary);
-    color: var(--bg-dark);
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-}
-
-.contact-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
-}
-
-.contact-btn:active {
-    transform: scale(0.95);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
-}
-
-.btn-icon {
-    background: transparent;
-}
-
-.social-links {
-    margin-top: 5rem;
+.contact-links {
     display: flex;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
-.social-link {
-    color: #888;
-    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-    padding: 1rem;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.02);
+.contact-link-card {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: var(--bg-card);
     border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.social-link:hover {
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
     color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-5px);
-    border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    backdrop-filter: blur(10px);
 }
 
-.social-link:active {
-    transform: scale(0.9);
+.contact-link-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3), 0 0 15px rgba(59, 130, 246, 0.1);
+    color: var(--accent-primary);
+}
+
+.contact-link-card:active {
+    transform: scale(0.96);
+}
+
+.contact-link-card svg {
+    transition: transform 0.3s ease;
+}
+
+.contact-link-card:hover svg {
+    transform: scale(1.1);
 }
 
 .contact::before {
@@ -90,5 +76,5 @@
     filter: blur(120px);
     z-index: 1;
     pointer-events: none;
-    opacity: 0.2;
+    opacity: 0.15;
 }
