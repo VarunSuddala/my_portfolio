@@ -128,3 +128,19 @@
         margin: 0 auto;
     }
 }
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .about-text p {
+        font-size: 1.05rem;
+    }
+
+    .code-body {
+        font-size: 0.85rem;
+        padding: 1rem;
+    }
+}

@@ -115,3 +115,10 @@ button {
     transform: translateY(0);
   }
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
