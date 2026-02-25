@@ -71,7 +71,7 @@ const Contact = () => {
                             <div className="success-message">
                                 <Send size={32} className="success-icon" />
                                 <h3>Message Sent!</h3>
-                                <p>Thanks for reaching out. I'll get back to you soon.</p>
+                                <p>Thanks for reaching out. Varun will- get back to you soon.</p>
                             </div>
                         ) : error ? (
                             <div className="success-message error-message">
@@ -90,7 +90,7 @@ const Contact = () => {
                                         required
                                         value={formData.name}
                                         onChange={handleChange}
-                                        placeholder="John Doe"
+                                        placeholder="your name"
                                     />
                                 </div>
                                 <div className="form-group">
@@ -102,7 +102,7 @@ const Contact = () => {
                                         required
                                         value={formData.email}
                                         onChange={handleChange}
-                                        placeholder="john@example.com"
+                                        placeholder="your email"
                                     />
                                 </div>
                                 <div className="form-group">
