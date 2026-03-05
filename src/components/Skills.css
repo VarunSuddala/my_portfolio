@@ -61,3 +61,14 @@
 .skill-card:hover::after {
     opacity: 1;
 }
+
+.skill-card.highlighted-skill {
+    border-color: rgba(59, 130, 246, 0.4);
+    background: rgba(59, 130, 246, 0.1);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.15);
+}
+
+.skill-card.highlighted-skill .skill-name {
+    color: #fff;
+    font-weight: 600;
+}

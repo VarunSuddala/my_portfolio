@@ -9,6 +9,7 @@
     grid-template-columns: 1fr 1.2fr;
     gap: 4rem;
     align-items: flex-start;
+    margin-top: 1rem;
 }
 
 .contact-info {
@@ -22,6 +23,11 @@
     line-height: 1.8;
     margin-bottom: 2.5rem;
     font-weight: 300;
+}
+
+#contact .section-title {
+    max-width: 800px;
+    line-height: 1.2;
 }
 
 .reach-links {

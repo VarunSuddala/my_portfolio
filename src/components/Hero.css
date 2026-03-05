@@ -1,11 +1,12 @@
 .hero {
-    min-height: 100vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    padding-top: 80px;
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 
 .hero-content {
@@ -60,6 +61,7 @@
     display: flex;
     justify-content: center;
     gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .btn-glow {
@@ -155,6 +157,47 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+.hero-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem;
+    margin-top: 2rem;
+}
+
+.hero-socials .social-icon {
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.hero-socials .social-icon:hover {
+    color: var(--text-primary);
+    transform: translateY(-2px);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+}
+
+.typewriter {
+    border-bottom: 2px solid transparent;
+}
+
+.blinking-cursor {
+    font-weight: 300;
+    color: var(--accent-primary);
+    animation: blink 1s step-end infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
     }
 }
 

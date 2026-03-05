@@ -7,30 +7,20 @@ const Skills = () => {
             skills: ["Python", "SQL"]
         },
         {
-            title: "Problem Solving",
-            skills: ["Data Structures", "Algorithms", "Complexity Analysis"]
+            title: "Backend & Databases",
+            skills: ["REST APIs", "FastAPI", "PostgreSQL", "MongoDB", "Redis"]
         },
         {
-            title: "Backend",
-            skills: ["REST APIs", "FastAPI"]
+            title: "DevOps & Cloud",
+            skills: ["Docker", "Linux", "AWS (EC2, S3)", "CI/CD"]
         },
         {
-            title: "Databases",
-            skills: ["PostgreSQL", "MongoDB", "Redis"]
-        },
-        {
-            title: "DevOps",
-            skills: ["Docker", "Linux", "Git / GitHub", "Nginx", "CI/CD"]
-        },
-        {
-            title: "Cloud",
-            skills: ["AWS (EC2, S3)"]
-        },
-        {
-            title: "Testing",
-            skills: ["PyTest", "Postman"]
+            title: "Fundamentals",
+            skills: ["Data Structures", "Algorithms"]
         }
     ];
+
+    const highlightedSkills = ["Python", "FastAPI", "Docker", "AWS (EC2, S3)", "PostgreSQL"];
 
     return (
         <section id="skills" className="skills section-padding">
@@ -41,11 +31,14 @@ const Skills = () => {
                         <div key={idx} className="skill-category-block fade-in" style={{ animationDelay: `${idx * 0.1}s` }}>
                             <h3 className="category-title">{category.title}</h3>
                             <div className="skills-grid">
-                                {category.skills.map((skill, index) => (
-                                    <div key={index} className="skill-card">
-                                        <span className="skill-name">{skill}</span>
-                                    </div>
-                                ))}
+                                {category.skills.map((skill, index) => {
+                                    const isHighlighted = highlightedSkills.includes(skill);
+                                    return (
+                                        <div key={index} className={`skill-card ${isHighlighted ? 'highlighted-skill' : ''}`}>
+                                            <span className="skill-name">{skill}</span>
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </div>
                     ))}

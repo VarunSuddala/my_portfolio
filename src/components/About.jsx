@@ -7,22 +7,29 @@ const About = () => {
                 <h2 className="section-title fade-in">About Me</h2>
                 <div className="about-content">
                     <div className="about-text fade-in" style={{ animationDelay: "0.2s" }}>
-                        <p>
-                            Hi, I'm <span className="highlight">Varun Suddala</span>, a Software Engineer focusing on <span className="text-gradient">Backend & DevOps</span>.
-                        </p>
-                        <p>
-                            I specialize in building reliable, scalable systems with clear architecture. With a strong foundation in <span className="highlight">Python, REST APIs, PostgreSQL, and Data Structures</span>, I focus on solving complex engineering problems through clean, maintainable code.
-                        </p>
-                        <p>
-                            My approach integrates a strong DevOps mindset. I leverage <span className="highlight">Docker, Linux, and AWS</span> to build streamlined CI/CD pipelines, containerize architectures, and bridge the gap between development and operations.
-                        </p>
+                        <div className="about-bio-container">
+                            <div className="profile-photo-placeholder">
+                                <img src="/profile.jpg" alt="Varun Suddala" className="profile-photo" />
+                            </div>
+                            <div className="about-bio">
+                                <p>
+                                    Hi, I'm <span className="highlight">Varun Suddala</span>, a Software Engineer specializing in <span className="text-gradient">Backend & DevOps</span>. I build reliable, scalable systems and robust APIs using <span className="highlight">Python, PostgreSQL, and AWS</span> — bridging the gap between engineering and operations.
+                                </p>
 
-                        <div className="education mt-4">
-                            <h3>Education</h3>
-                            <p className="edu-item">
-                                <strong>B.Tech in Computer Science</strong> <br />
-                                SR University, Warangal (2024 – 2027)
-                            </p>
+                                <div className="trait-badges">
+                                    <span className="trait-badge">⚡ Scalable Systems</span>
+                                    <span className="trait-badge">🐳 DevOps Mindset</span>
+                                    <span className="trait-badge">🔧 Clean Architecture</span>
+                                </div>
+
+                                <div className="education mt-4">
+                                    <h3>Education</h3>
+                                    <p className="edu-item">
+                                        <strong>B.Tech in Computer Science</strong> <br />
+                                        SR University, Warangal (2024 – 2027)
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="about-visual fade-in" style={{ animationDelay: "0.4s" }}>
