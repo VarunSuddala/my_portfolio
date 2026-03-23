@@ -66,7 +66,7 @@ const Hero = () => {
                         <a href="https://www.linkedin.com/in/varun-suddala-b28621268/" target="_blank" rel="noopener noreferrer" className="social-icon">
                             <Linkedin size={24} />
                         </a>
-                        <a href="https://leetcode.com/u/user1485Qy/" target="_blank" rel="noopener noreferrer" className="social-icon">
+                        <a href="https://leetcode.com/u/EzwDsgpzVX/" target="_blank" rel="noopener noreferrer" className="social-icon">
                             <LeetCodeIcon size={24} />
                         </a>
                     </div>
