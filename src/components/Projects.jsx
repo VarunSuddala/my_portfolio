@@ -8,7 +8,7 @@ const Projects = () => {
             description: "RESTful backend service using FastAPI with JWT authentication and Role-Based Access Control. Containerized using Docker and deployed behind an Nginx reverse proxy for high availability.",
             metric: "Handles 1k+ concurrent requests with <50ms latency",
             tags: ["FastAPI", "Python", "PostgreSQL", "Docker", "Nginx"],
-            github: "https://github.com/varunsuddala",
+            github: "https://github.com/VarunSuddala/Task_Management",
             demo: "#",
             image: "/task_api.png"
         },
