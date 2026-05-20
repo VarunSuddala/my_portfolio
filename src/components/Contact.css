@@ -78,13 +78,52 @@
 }
 
 .contact-form-container {
-    background: var(--bg-card);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: transparent;
+    border: none;
     border-radius: 16px;
     padding: 2.5rem;
     position: relative;
     z-index: 2;
+    overflow: hidden;
+}
+
+.contact-form-container::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg,
+        transparent 0%,
+        rgba(59, 130, 246, 0.4) 25%,
+        rgba(139, 92, 246, 0.4) 50%,
+        rgba(59, 130, 246, 0.4) 75%,
+        transparent 100%
+    );
+    animation: rotate-border 4s linear infinite;
+    z-index: -2;
+}
+
+.contact-form-container::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background-color: #030303;
+    background-image: linear-gradient(var(--bg-card), var(--bg-card));
+    border-radius: 15px;
+    z-index: -1;
     backdrop-filter: blur(10px);
+}
+
+@keyframes rotate-border {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .form-group {

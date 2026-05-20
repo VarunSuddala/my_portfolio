@@ -43,19 +43,22 @@ const Projects = () => {
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
         
-        // max rotation 5 degrees
-        const rotateX = ((y - centerY) / centerY) * -5;
-        const rotateY = ((x - centerX) / centerX) * 5;
+        // max rotation 8 degrees
+        const rotateX = ((y - centerY) / centerY) * -8;
+        const rotateY = ((x - centerX) / centerX) * 8;
 
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
-        card.style.setProperty("--mouse-x", `${x}px`);
-        card.style.setProperty("--mouse-y", `${y}px`);
+        card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        
+        const pctX = ((x / rect.width) * 100).toFixed(2);
+        const pctY = ((y / rect.height) * 100).toFixed(2);
+        card.style.setProperty("--mouse-x-pct", `${pctX}%`);
+        card.style.setProperty("--mouse-y-pct", `${pctY}%`);
     };
 
     const handleMouseLeave = (index) => {
         const card = document.getElementById(`project-card-${index}`);
         if (!card) return;
-        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+        card.style.transform = `perspective(800px) rotateX(0deg) rotateY(0deg)`;
     };
 
     return (

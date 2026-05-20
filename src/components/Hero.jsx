@@ -9,7 +9,13 @@ const LeetCodeIcon = ({ size = 24 }) => (
     </svg>
 );
 
-const roles = ["Backend Engineer", "DevOps Enthusiast", "API Architect"];
+const roles = [
+    "Backend Engineer", 
+    "FastAPI Developer", 
+    "DevOps Enthusiast", 
+    "Python Developer", 
+    "Go Learner"
+];
 
 const Hero = () => {
     const [currentRole, setCurrentRole] = useState("");
@@ -17,8 +23,8 @@ const Hero = () => {
     const [isDeleting, setIsDeleting] = useState(false);
 
     useEffect(() => {
-        const typeSpeed = isDeleting ? 50 : 100;
-        const delay = isDeleting && currentRole === "" ? 500 : (!isDeleting && currentRole === roles[roleIndex] ? 2000 : typeSpeed);
+        const typeSpeed = isDeleting ? 40 : 80;
+        const delay = (!isDeleting && currentRole === roles[roleIndex]) ? 1800 : typeSpeed;
 
         const timeout = setTimeout(() => {
             if (!isDeleting && currentRole !== roles[roleIndex]) {

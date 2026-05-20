@@ -17,16 +17,26 @@ const About = () => {
                                 </p>
 
                                 <div className="trait-badges">
-                                    <span className="trait-badge">⚡ Scalable Systems</span>
-                                    <span className="trait-badge">🐳 DevOps Mindset</span>
-                                    <span className="trait-badge">🔧 Clean Architecture</span>
+                                    <span className="trait-badge"> Scalable Systems</span>
+                                    <span className="trait-badge"> DevOps Mindset</span>
+                                    <span className="trait-badge"> Clean Architecture</span>
                                 </div>
 
                                 <div className="education mt-4">
                                     <h3>Education</h3>
                                     <p className="edu-item">
-                                        <strong>B.Tech in Computer Science</strong> <br />
-                                        SR University, Warangal (2024 – 2027)
+                                        <strong>B.Tech in Computer Science Engineering</strong> <br />
+                                        SR University, Warangal, Telangana (2024 – 2027) <br />
+                                        CGPA: 7.2/10
+                                    </p>
+                                    <p className="edu-item mt-3">
+                                        <strong>Diploma in Electronics and Communication Engineering</strong> <br />
+                                        Vaagdevi Engineering College, Warangal, Telangana (2021 – 2024) <br />
+                                        CGPA: 8.1/10
+                                    </p>
+                                    <p className="edu-item mt-3">
+                                        <strong>SSC / 10th Standard</strong> <br />
+                                        Saketha High School, Hanamkonda, Telangana (2020 – 2021)
                                     </p>
                                 </div>
                             </div>
