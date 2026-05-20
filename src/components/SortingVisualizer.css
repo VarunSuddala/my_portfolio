@@ -1,0 +1,110 @@
+/* ── Sorting Visualizer Wrapper ─────────────────────────────────────── */
+.sorting-visualizer-wrapper {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+/* Legend */
+.sort-legend {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.sort-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.sort-legend-item::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+}
+
+.sort-legend-item.blue::before   { background: #3b82f6; }
+.sort-legend-item.yellow::before { background: #facc15; }
+.sort-legend-item.green::before  { background: #22c55e; }
+
+/* Canvas container */
+.sort-canvas-wrapper {
+    width: 100%;
+    max-width: 700px;
+    height: 280px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.01);
+    overflow: hidden;
+    backdrop-filter: blur(6px);
+}
+
+.sort-canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
+/* Restart button */
+.sort-restart-btn {
+    background: transparent;
+    color: var(--accent-primary);
+    border: 1px solid rgba(59, 130, 246, 0.35);
+    padding: 0.65rem 2rem;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sort-restart-btn:hover {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 16px rgba(59, 130, 246, 0.25);
+    transform: translateY(-2px);
+}
+
+.sort-restart-btn:active {
+    transform: scale(0.96);
+}
+
+/* Mobile fallback bars */
+.sort-mobile-fallback {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.sort-mobile-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    height: 80px;
+}
+
+.sort-mobile-bar {
+    width: 18px;
+    border-radius: 4px 4px 0 0;
+    min-height: 10px;
+    opacity: 0.75;
+}
+
+.sort-mobile-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}

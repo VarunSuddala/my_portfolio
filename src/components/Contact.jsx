@@ -26,7 +26,7 @@ const Contact = () => {
             form.current,
             import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         )
-            .then((result) => {
+            .then(() => {
                 setIsSubmitting(false);
                 setSuccess(true);
                 setFormData({ name: "", email: "", message: "" });

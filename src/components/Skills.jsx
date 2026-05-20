@@ -22,6 +22,13 @@ const Skills = () => {
 
     const highlightedSkills = ["Python", "FastAPI", "Docker", "AWS (EC2, S3)", "PostgreSQL"];
 
+    const categoryClassMap = {
+        "Programming Languages": "lang-card",
+        "Backend & Databases": "backend-card",
+        "DevOps & Cloud": "devops-card",
+        "Fundamentals": "fund-card"
+    };
+
     return (
         <section id="skills" className="skills section-padding">
             <div className="container">
@@ -33,8 +40,9 @@ const Skills = () => {
                             <div className="skills-grid">
                                 {category.skills.map((skill, index) => {
                                     const isHighlighted = highlightedSkills.includes(skill);
+                                    const catClass = categoryClassMap[category.title] || "";
                                     return (
-                                        <div key={index} className={`skill-card ${isHighlighted ? 'highlighted-skill' : ''}`}>
+                                        <div key={index} className={`skill-card ${isHighlighted ? 'highlighted-skill' : ''} ${catClass}`}>
                                             <span className="skill-name">{skill}</span>
                                         </div>
                                     );

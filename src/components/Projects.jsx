@@ -32,6 +32,32 @@ const Projects = () => {
         }
     ];
 
+    const handleMouseMove = (e, index) => {
+        const card = document.getElementById(`project-card-${index}`);
+        if (!card) return;
+        
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        // max rotation 5 degrees
+        const rotateX = ((y - centerY) / centerY) * -5;
+        const rotateY = ((x - centerX) / centerX) * 5;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        card.style.setProperty("--mouse-x", `${x}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
+    };
+
+    const handleMouseLeave = (index) => {
+        const card = document.getElementById(`project-card-${index}`);
+        if (!card) return;
+        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+    };
+
     return (
         <section id="projects" className="projects section-padding">
             <div className="container">
@@ -40,8 +66,11 @@ const Projects = () => {
                     {projects.map((project, index) => (
                         <div
                             key={index}
+                            id={`project-card-${index}`}
                             className="project-card fade-in"
                             style={{ animationDelay: `${index * 0.2}s` }}
+                            onMouseMove={(e) => handleMouseMove(e, index)}
+                            onMouseLeave={() => handleMouseLeave(index)}
                         >
                             <div className="project-thumbnail-wrapper">
                                 <img src={project.image} alt={project.title} className="project-thumbnail" />

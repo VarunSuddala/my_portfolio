@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Github, Linkedin } from "lucide-react";
+import ParticleNetwork from "./ParticleNetwork";
 import "./Hero.css";
 
 const LeetCodeIcon = ({ size = 24 }) => (
@@ -8,8 +9,9 @@ const LeetCodeIcon = ({ size = 24 }) => (
     </svg>
 );
 
+const roles = ["Backend Engineer", "DevOps Enthusiast", "API Architect"];
+
 const Hero = () => {
-    const roles = ["Backend Engineer", "DevOps Enthusiast", "API Architect"];
     const [currentRole, setCurrentRole] = useState("");
     const [roleIndex, setRoleIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
@@ -36,6 +38,8 @@ const Hero = () => {
 
     return (
         <section id="home" className="hero">
+            {/* Three.js Particle Network — sits behind all hero content */}
+            <ParticleNetwork />
             <div className="container hero-content">
                 <div className="hero-text fade-in-up">
                     <h2 className="hero-greeting">Hello, I'm</h2>

@@ -1,5 +1,7 @@
 import { Code2, Terminal, Cpu } from "lucide-react";
+import SortingVisualizer from "./SortingVisualizer";
 import "./ProblemSolving.css";
+
 
 const ProblemSolving = () => {
     return (
@@ -34,6 +36,8 @@ const ProblemSolving = () => {
                         </div>
                     </div>
                 </div>
+                {/* Three.js Bubble Sort Visualizer — visual accent */}
+                <SortingVisualizer />
             </div>
         </section>
     );
