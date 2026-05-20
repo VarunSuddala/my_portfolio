@@ -24,7 +24,7 @@ const Hero = () => {
 
     useEffect(() => {
         const typeSpeed = isDeleting ? 40 : 80;
-        const delay = (!isDeleting && currentRole === roles[roleIndex]) ? 1800 : typeSpeed;
+        const delay = isDeleting && currentRole === "" ? 500 : (!isDeleting && currentRole === roles[roleIndex] ? 1800 : typeSpeed);
 
         const timeout = setTimeout(() => {
             if (!isDeleting && currentRole !== roles[roleIndex]) {

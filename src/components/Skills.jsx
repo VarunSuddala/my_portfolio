@@ -1,60 +1,70 @@
+import { Terminal, Database, Cloud, Code2, Binary, Cpu, Box, GitBranch, Network, Server, Layers } from "lucide-react";
 import "./Skills.css";
 
 const Skills = () => {
     const skillCategories = [
         {
-            title: "Programming Languages",
-            skills: ["Python", "SQL"]
+            title: "Languages & Frameworks",
+            skills: [
+                { name: "Python", level: "Advanced", icon: <Code2 /> },
+                { name: "FastAPI", level: "Advanced", icon: <Server /> },
+                { name: "REST APIs", level: "Advanced", icon: <Network /> }
+            ]
         },
         {
-            title: "Backend & Databases",
-            skills: ["REST APIs", "FastAPI", "PostgreSQL", "MongoDB", "Redis"]
+            title: "Databases & Caching",
+            skills: [
+                { name: "SQL", level: "Advanced", icon: <Database /> },
+                { name: "PostgreSQL", level: "Advanced", icon: <Database /> },
+                { name: "MongoDB", level: "Intermediate", icon: <Layers /> },
+                { name: "Redis", level: "Intermediate", icon: <Box /> }
+            ]
         },
         {
-            title: "DevOps & Cloud",
-            skills: ["Docker", "Linux", "AWS (EC2, S3)", "CI/CD"]
+            title: "DevOps & Infrastructure",
+            skills: [
+                { name: "Docker", level: "Intermediate", icon: <Box /> },
+                { name: "Linux", level: "Advanced", icon: <Terminal /> },
+                { name: "AWS", level: "Intermediate", icon: <Cloud /> },
+                { name: "CI/CD", level: "Intermediate", icon: <GitBranch /> }
+            ]
         },
         {
-            title: "Fundamentals",
-            skills: ["Data Structures", "Algorithms"]
+            title: "Core Concepts",
+            skills: [
+                { name: "Data Structures", level: "Advanced", icon: <Binary /> },
+                { name: "Algorithms", level: "Advanced", icon: <Cpu /> }
+            ]
         }
     ];
-
-    const highlightedSkills = ["Python", "FastAPI", "Docker", "AWS (EC2, S3)", "PostgreSQL"];
-
-    const categoryClassMap = {
-        "Programming Languages": "lang-card",
-        "Backend & Databases": "backend-card",
-        "DevOps & Cloud": "devops-card",
-        "Fundamentals": "fund-card"
-    };
-
-    const categoryMap = {
-        "Programming Languages": "languages",
-        "Backend & Databases": "backend",
-        "DevOps & Cloud": "devops",
-        "Fundamentals": "fundamentals"
-    };
 
     return (
         <section id="skills" className="skills section-padding">
             <div className="container">
-                <h2 className="section-title fade-in">Technical Skills</h2>
-                <div className="skills-container">
+                <div className="section-header fade-in">
+                    <h2 className="section-title">Technical Skills</h2>
+                    <div className="header-line"></div>
+                </div>
+                
+                <div className="skills-grid-container">
                     {skillCategories.map((category, idx) => (
-                        <div key={idx} className="skill-category-block fade-in" style={{ animationDelay: `${idx * 0.1}s` }}>
-                            <h3 className="category-title">{category.title}</h3>
-                            <div className="skills-grid">
-                                {category.skills.map((skill, index) => {
-                                    const isHighlighted = highlightedSkills.includes(skill);
-                                    const catClass = categoryClassMap[category.title] || "";
-                                    const catData = categoryMap[category.title] || "";
-                                    return (
-                                        <div key={index} className={`skill-card ${isHighlighted ? 'highlighted-skill' : ''} ${catClass}`} data-category={catData}>
-                                            <span className="skill-name">{skill}</span>
+                        <div key={idx} className="skill-category fade-in" style={{ animationDelay: `${idx * 0.15}s` }}>
+                            <h3 className="skill-category-title">{category.title}</h3>
+                            <div className="skill-cards-grid">
+                                {category.skills.map((skill, index) => (
+                                    <div key={index} className="modern-skill-card">
+                                        <div className="skill-card-glow"></div>
+                                        <div className="skill-card-content">
+                                            <div className="skill-icon-wrapper">
+                                                {skill.icon}
+                                            </div>
+                                            <div className="skill-details">
+                                                <h4 className="skill-name">{skill.name}</h4>
+                                                <span className="skill-level">{skill.level}</span>
+                                            </div>
                                         </div>
-                                    );
-                                })}
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     ))}
